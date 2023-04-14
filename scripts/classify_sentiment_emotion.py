@@ -16,7 +16,7 @@ def main():
 
     first_half_df = pd.read_csv(first_half_path)
 
-    batch_size = 32
+    batch_size = 128
     emotion_classifier = transformers.pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base", return_all_scores=True, batch_size=batch_size)
     sentiment_classifier = transformers.pipeline("text-classification", model="j-hartmann/sentiment-roberta-large-english-3-classes", return_all_scores=True, batch_size=batch_size)
 
